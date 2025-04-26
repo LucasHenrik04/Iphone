@@ -1,0 +1,63 @@
+
+@startuml
+
+interface AparelhoTelefonico {
+    + ligar()
+    + iniciarCorreio()
+    + atender()
+}
+
+interface NavegadorInternet {
+    + exibirPagina()
+    + adicionarNovaAba()
+    + atualizarPagina()
+}
+
+interface ReprodutorMusical {
+    + tocar()
+    + pausar()
+    + selecionarMusica()
+}
+
+class telefone {
+    + ligar()
+    + iniciarCorreio()
+    + atender()
+}
+
+class Navegador {
+    + exibirPagina()
+    + adicionarNovaAba()
+    + atualizarPagina()
+}
+
+class Musica {
+    + tocar()
+    + pausar()
+    + selecionarMusica()
+}
+
+class Sistemas {
+    + ligar()
+    + iniciarCorreio()
+    + atender()
+    + exibirPagina()
+    + adicionarNovaAba()
+    + atualizarPagina()
+    + tocar()
+    + pausar()
+    + selecionarMusica()
+}
+
+class Iphone {
+    + main(args: String[])
+}
+
+telefone ..|> AparelhoTelefonico
+Navegador ..|> NavegadorInternet
+Musica ..|> ReprodutorMusical
+Sistemas ..|> AparelhoTelefonico
+Sistemas ..|> NavegadorInternet
+Sistemas ..|> ReprodutorMusical
+
+@enduml
